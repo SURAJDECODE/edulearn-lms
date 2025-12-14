@@ -79,138 +79,114 @@ edulearn-lms/
 - MongoDB Atlas account
 - npm or yarn
 
-### Backend Setup
+### Step 1: Clone the Repository
+```bash
+git clone https://github.com/YOUR_USERNAME/edulearn-lms.git
+cd edulearn-lms
+```
+
+### Step 2: Backend Setup
 ```bash
 cd server
 npm install
 ```
 
-Create `.env` file in server directory:
-```
+Create `.env` file in the `server` directory with the following variables:
+```env
 PORT=5000
-MONGO_URI=your_mongodb_connection_string
-JWT_Sec=your_jwt_secret
-ActivationSecret=your_activation_secret
+MONGO_URI=your_mongodb_atlas_connection_string
+JWT_Sec=your_jwt_secret_key
+ActivationSecret=your_activation_secret_key
 Razorpay_Key=your_razorpay_key
 Razorpay_Secret=your_razorpay_secret
-Gmail=your_email@gmail.com
-Password=your_app_password
+Gmail=your_gmail_address
+Password=your_gmail_app_password
 ```
 
-Start backend:
+Start the backend server:
 ```bash
 npm start
 ```
 
-### Frontend Setup
+Backend will run on: `http://localhost:5000`
+
+### Step 3: Frontend Setup
+
+Open a new terminal and navigate to frontend:
 ```bash
 cd frontend
 npm install
 npm run dev
 ```
 
-Frontend runs on: `http://localhost:5173`
-Backend runs on: `http://localhost:5000`
+Frontend will run on: `http://localhost:5173`
 
-## 📸 Screenshots
+### Step 4: Create Admin Account
 
-[Add demo screenshots here after uploading]
+1. Register a new account through the application
+2. Manually update the user role in MongoDB to "admin" for the first admin user
+3. Or use the default admin credentials if seeded
 
-## 🎥 Demo Video
+## 🔑 Environment Variables
 
-[Demo Video Link - Add your video link]
+Required environment variables for the backend:
+
+| Variable | Description |
+|----------|-------------|
+| PORT | Server port (default: 5000) |
+| MONGO_URI | MongoDB Atlas connection string |
+| JWT_Sec | Secret key for JWT token generation |
+| ActivationSecret | Secret key for account activation |
+| Razorpay_Key | Razorpay API key for payments |
+| Razorpay_Secret | Razorpay secret key |
+| Gmail | Gmail address for sending OTP emails |
+| Password | Gmail app password (not regular password) |
+
+## 📝 Usage
+
+### Admin Login
+1. Navigate to `/login`
+2. Login with admin credentials
+3. Access admin dashboard to manage courses, lectures, and users
+
+### Student Registration
+1. Navigate to `/register`
+2. Complete registration form
+3. Verify email with OTP
+4. Browse and enroll in courses
+
+## 🐛 Troubleshooting
+
+### Common Issues
+
+**MongoDB Connection Error:**
+- Verify MONGO_URI in `.env` file
+- Check MongoDB Atlas network access (whitelist IP)
+- Ensure database user has proper permissions
+
+**Email OTP Not Sending:**
+- Use Gmail App Password (not regular password)
+- Enable "Less secure app access" in Gmail settings
+- Check Gmail and Password in `.env` file
+
+**File Upload Issues:**
+- Ensure `uploads` directory exists in server folder
+- Check file size limits (default: 50MB)
+- Verify Multer configuration
+
+**Port Already in Use:**
+- Change PORT in `.env` file
+- Or kill the process using the port
 
 ## 👨‍💻 Developer
 
 **Suraj Anand**
 - Email: surazz3275@gmail.com
-- LinkedIn: [Your LinkedIn]
-- Location: Asansol, West Bengal, India
 
 ## 📄 License
 
 This project was created as part of the Ecera System LLC MERN Internship screening assignment.
 
-## 🙏 Acknowledgments
-
-- Ecera System LLC for the internship opportunity
-- MERN Stack Community
-
 ---
 
-**Note:** This is an educational project built for internship screening purposes.
-```
-
-Click **"Commit new file"**
-
----
-
-### **Step 5: Copy Your GitHub Repository Link**
-
-Your GitHub repo URL will be:
-```
-https://github.com/YOUR_USERNAME/edulearn-lms
-```
-
-Example:
-```
-https://github.com/surajxyz/edulearn-lms
-```
-
----
-
-## 📧 **Update Your Email With GitHub Link**
-
-In your email body, find this section:
-```
-🔗 Source Code Repository:
-GitHub: [Add your GitHub repository link here if you have one]
-```
-
-**Replace with:**
-```
-🔗 Source Code Repository:
-GitHub: https://github.com/YOUR_USERNAME/edulearn-lms
-Complete source code with setup instructions available in the repository.
-```
-
----
-
-## ⚠️ **IMPORTANT - Security Tips:**
-
-### **DO NOT Upload These Files:**
-
-1. **`.env`** file (contains passwords!) - Use `.env.example` instead
-2. **`node_modules`** folders (too large, can be installed via npm)
-3. **`uploads`** folder with actual uploaded files (optional)
-
-### **Create `.gitignore` File:**
-
-In project root, create `.gitignore`:
-```
-# Dependencies
-node_modules/
-frontend/node_modules/
-server/node_modules/
-
-# Environment variables
-.env
-server/.env
-
-# Uploads
-uploads/
-*.mp4
-*.jpg
-*.png
-
-# Build
-frontend/dist/
-frontend/build/
-
-# OS
-.DS_Store
-Thumbs.db
-
-# IDE
-.vscode/
-.idea/
+**Note:** This is an educational project built for internship screening purposes. Not intended for production use without proper security audits and enhancements.
