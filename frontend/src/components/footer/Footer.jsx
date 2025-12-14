@@ -11,17 +11,17 @@ const Footer = () => {
     <footer>
       <div className="footer-content">
         <p>
-          &copy; 2024 Your E-Learning Platform. All rights reserved. <br /> Made
-          with ❤️ <a href="">Prashant Kumar</a>
+          &copy; 2025 EduLearn. All rights reserved. <br />
+          Created with ❤️ by <a href="">Suraj Anand</a>
         </p>
         <div className="social-links">
-          <a href="">
+          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
             <AiFillFacebook />
           </a>
-          <a href="">
+          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
             <AiFillTwitterSquare />
           </a>
-          <a href="">
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
             <AiFillInstagram />
           </a>
         </div>

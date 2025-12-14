@@ -5,39 +5,39 @@ const Testimonials = () => {
   const testimonialsData = [
     {
       id: 1,
-      name: "John Doe",
-      position: "Student",
+      name: "Rohan Mehta",
+      position: "Computer Science Student",
       message:
-        "This platform helped me learn so effectively. The courses are amazing and the instructors are top-notch.",
+        "This platform helped me crack my placement interviews. The full-stack course covers everything needed for a fresher in India.",
       image:
-        "https://th.bing.com/th?q=Current+Bachelor&w=120&h=120&c=1&rs=1&qlt=90&cb=1&dpr=1.3&pid=InlineBlock&mkt=en-IN&cc=IN&setlang=en&adlt=moderate&t=1&mw=247",
+        "https://images.pexels.com/photos/7752893/pexels-photo-7752893.jpeg",
     },
     {
       id: 2,
-      name: "Jane Smith",
-      position: "Student",
+      name: "Priya Sharma",
+      position: "Web Developer",
       message:
-        "I've learned more here than in any other place. The interactive lessons and quizzes make learning enjoyable.",
+        "I switched from a non-tech background to IT thanks to these courses. The Hindi explanations made complex logic very easy to understand.",
       image:
-        "https://th.bing.com/th/id/OIP.GKAiW3oc2TWXVEeZAzrWOAHaJF?w=135&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7",
+        "https://images.pexels.com/photos/3769021/pexels-photo-3769021.jpeg",
     },
     {
       id: 3,
-      name: "John Doe",
-      position: "Student",
+      name: "Amit Verma",
+      position: "Software Engineer",
       message:
-        "This platform helped me learn so effectively. The courses are amazing and the instructors are top-notch.",
+        "The best platform for affordable education. The projects we built in the MERN stack course were very practical and industry-ready.",
       image:
-        "https://th.bing.com/th?q=Current+Bachelor&w=120&h=120&c=1&rs=1&qlt=90&cb=1&dpr=1.3&pid=InlineBlock&mkt=en-IN&cc=IN&setlang=en&adlt=moderate&t=1&mw=247",
+        "https://images.pexels.com/photos/6476365/pexels-photo-6476365.jpeg",
     },
     {
       id: 4,
-      name: "Jane Smith",
-      position: "Student",
+      name: "Sneha Gupta",
+      position: "Data Analyst",
       message:
-        "I've learned more here than in any other place. The interactive lessons and quizzes make learning enjoyable.",
+        "Highly recommended! The instructors clear doubts instantly, and the roadmap provided is perfect for Indian students targeting MNCs.",
       image:
-        "https://th.bing.com/th/id/OIP.GKAiW3oc2TWXVEeZAzrWOAHaJF?w=135&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7",
+        "https://images.pexels.com/photos/14596539/pexels-photo-14596539.jpeg",
     },
   ];
   return (
